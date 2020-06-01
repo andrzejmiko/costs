@@ -24,3 +24,31 @@ tslint.json -> config of tslint
 important ts files:
 
 app.ts -> lounches whole app
+
+used table schema: 
+
+CREATE TABLE account (
+
+    user_id integer PRIMARY KEY ,
+
+    username character varying(200) NOT NULL,
+
+    password character varying(200) NOT NULL,
+
+    permissions character varying(200)
+    
+);
+
+create .env file with your config 
+
+DB_USER=
+
+DB_PASSWORD=
+
+DB_HOST=
+
+DB_DATABASE=
+
+DB_PORT=
+
+JWT_SECRET=
