@@ -7,17 +7,20 @@ import * as budgetRouter from './routes/budget'
 import "./authStrategy/local";
 import "./authStrategy/jwt";
 
-
 const app = express();
-app.use(passport.initialize());
 
+// config app dependencies 
+app.use(passport.initialize());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+
+// config app REST paths
 app.use(userRouter);
 app.use(budgetRouter);
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
      console.log(`Server is running in http://localhost:${PORT}`)
 })

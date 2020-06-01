@@ -16,6 +16,7 @@ const db_props = {
 
 export class userDao {
 
+  // simple class to interact with PG
     public async readUsers() {
         const client = new Client(db_props);
         await client.connect();
